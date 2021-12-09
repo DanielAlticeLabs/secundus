@@ -22,9 +22,5 @@ jobs:
         java-version: '17'
         distribution: 'adopt'
         cache: maven
-    - name: Build with Maven
+    - name: Build with Maven (including unit testing)
       run: mvn -B package --file poc/pom.xml
-    - name: RunMavenTest
-      # You may pin to the exact commit or the version.
-      # uses: Maes95/maven-action@69c270aa2d7d371b74a888e3248af909f840585a
-      uses: Maes95/maven-action@1.0.0
