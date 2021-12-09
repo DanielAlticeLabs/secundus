@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PocApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Starting...");
+		System.out.println("Starting Uno branch...");
 		SpringApplication.run(PocApplication.class, args);
 	}
 
