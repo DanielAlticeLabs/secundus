@@ -9,13 +9,10 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @SpringBootTest
 class CalculatorTests {
 
-	@Test
-	void contextLoads() {
-        // Success
-        assert(Calculator.operation(1, 2) == 3);
-
-        //Fail
-        assert(Calculator.operation(1, 2) == 4);
-	}
+        @Test
+        void contextLoads() {
+                assert (Calculator.operation(1, 2) == 3);
+                assert (Calculator.operation(1, 2) != 4);
+        }
 
 }
