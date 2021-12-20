@@ -25,4 +25,4 @@ jobs:
     - name: Build with Maven (including unit testing)
       run: mvn -B package --file poc/pom.xml
     - name: Deploy to Preview Environment
-      run: echo "Deploying goes here"
+      run: echo "Deployment goes here"
