@@ -1,0 +1,25 @@
+name: Development Pipeline Stage 2
+
+on:
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 17
+      uses: actions/setup-java@v2
+      with:
+        java-version: '17'
+        distribution: 'adopt'
+        cache: maven
+    - name: Build with Maven (including unit testing)
+      run: mvn -B package --file poc/pom.xml
+    - name: Deploy to Preview Environment
+      run: echo "Deployment goes here"
