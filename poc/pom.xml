@@ -42,20 +42,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>wsdl4j</groupId>
-			<artifactId>wsdl4j</artifactId>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/jaxb2-maven-plugin -->
-		<dependency>
-			<groupId>org.codehaus.mojo</groupId>
-			<artifactId>jaxb2-maven-plugin</artifactId>
-			<version>2.5.0</version>
-		</dependency>
-
-
 	</dependencies>
 
 	<build>
@@ -64,34 +50,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>jaxb2-maven-plugin</artifactId>
-				<version>2.5.0</version>
-				<executions>
-					<execution>
-						<id>schemagen</id>
-						<goals>
-							<goal>schemagen</goal>
-						</goals>
-					</execution>
-				</executions>
-
-				<configuration>
-					<transformSchemas>
-						<transformSchema>
-							<uri>https://www.example.org/calculator</uri>
-							<toPrefix>calc</toPrefix>
-							<toFile>calculator.xsd</toFile>
-						</transformSchema>
-					</transformSchemas>
-					<includes>
-						<include>com/poc/poc/*</include>
-					</includes>
-					<verbose>true</verbose>
-
-				</configuration>
-			</plugin>
+			
 		</plugins>
 	</build>
 
