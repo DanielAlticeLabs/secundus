@@ -41,7 +41,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: ./poc/
-        file: ./Dockerfile
+        file: ./poc/Dockerfile
         push: true
         tags: ${{ secrets.DOCKER_HUB_USERNAME }}/poc:latest
 
